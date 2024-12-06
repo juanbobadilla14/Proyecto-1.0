@@ -16,7 +16,7 @@
 
 .fondo {
     background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1)), 
-                url(/new_node.js/client/view/imagenes/fondo3.jpg);
+                url(/new_node.js-master/new_node.js-master/client/view/imagenes/fondo3.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -217,7 +217,7 @@ footer a:hover {
 }
 
 
-.carrito {
+.carrito-btn {
     display: flex;
     flex-direction: column;
     padding: 1%;
@@ -509,4 +509,145 @@ footer a:hover {
     flex-direction: column;
     justify-content: flex-end;
 }
+
+/* ------------------ CARRITO DE COMPRAS ----------------------- */
+
+.carrito {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    background-color: darkgray;
+    padding: 2%;
+}
+
+.añadirCarrito {
+    background-color: black;
+    color: var(--button-text);
+    margin-bottom: 1%;
+}
+
+.verCarrito {
+    background-color: black;
+    color: var(--button-text);
+}
+
+.producto {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    background-color: rgb(200, 197, 197);
+    margin-top: 2%;
+    padding: 2%;
+    margin-block: 2%;
+    margin-left: 2%;
+    margin-right: 2%;
+    border-radius: 50px;
+}
+
+.producto img {
+    width: 50%;
+    height: auto;
+}
+
+.producto .description {
+    padding: 10px;
+    text-align: center;
+    display: block; 
+}
+
+.producto .description h2 {
+    font-size: 1.2em;
+    margin: 0.5em 0;
+    font-weight: 700;
+}
+
+.producto .description p {
+    margin: 0;
+    font-size: 1em;
+}
+
+.producto .price {
+    font-size: 1.2em;
+    color: var(--secondary-color);
+    margin-top: 5px;
+}
+
+.producto .cantidad {
+    font-size: 1.2em;
+    color: var(--secondary-color);
+    margin-top: 5px;
+}
+
+.producto .total {
+    font-size: 1.2em;
+    color: var(--secondary-color);
+    margin-top: 5px;
+}
+
+.producto .eliminar {
+    font-size: 1.2em;
+    color: var(--secondary-color);
+    margin-top: 5px;
+}
+
+.bt-eliminar {
+    border: none;
+    background-color: rgb(200, 197, 197);
+    width: 10%;
+    height: 20%;
+    margin-inline-start: 192%;
+    margin-block-start: 18%;
+}
+
+.bt-eliminar img {
+    width: 30px;
+    height: 30px;
+}
+
+.total {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.total p {
+    font-size: 1.5em;
+    color: var(--secondary-color);
+}
+
+.campoTotal {
+    background-color: rgb(200, 197, 197);
+    margin-left: 10%;
+    margin-right: 10%;
+    border-radius: 60px;
+    margin-block-end: 5%;
+}
+
+.botones {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-block-end: 5%;
+}
+
+.bt-comprar {
+    background-color: black;
+    color: white;
+    margin-block-end: 5%;
+    width: 40%;
+    margin-inline-end: 1%;
+}
+
+.bt-vaciar {
+    background-color: black;
+    color: white;
+    margin-block-end: 5%;
+    width: 40%;
+    margin-inline-start: 1%;
+}
+
+
+
+
+
+
 
