@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="view/css/style.css"> <!-- Estilos -->
 </head>
 <body>
+<!---------------------------------- PANTALLA DE CARGA --------------------------------------->
+    <div id="pantalla-templates"></div>
+
 <!---------------------------------- PANTALLA PRINCIPAL -------------------------------------->
     <template id="pantallaPrincipal"> 
         <div class="container">
@@ -23,10 +26,9 @@
                             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                             <button class="btn btn-outline-success text-white border border-white" type="submit">Buscar</button>
                         </form>
-                        <button class ="inSesion" id="bt-inSesion">Iniciar sesion/Registrarse</button>
+                        <button class ="btn-inSesion" id="bt-inSesion">Iniciar sesion/Registrarse</button>
                     </div>
                 </nav>
-
                 <nav class="navbar bg-primary">
                     <a href="#category1">Productos de Oficina</a>
                     <a href="#category2">Papeles</a>
@@ -36,8 +38,7 @@
                     <a href="#category6">Libros y Apuntes</a>
                 </nav>
             </header>
-
-            
+<!------------------------------------- CONTENIDO DE LA PAGINA ------------------------------->
                 <div id="category1" class="category">productos de oficina</div>
                 <div class="catalogo">
                     <a href="enlace2.html">
@@ -141,7 +142,6 @@
                         </div>
                     </a>
                 </div>
-
 
                 <div id="category3" class="category">Útiles Escolares</div>
                 <div class="catalogo">
@@ -351,16 +351,16 @@
                 </a>
             </div>
         </div>
-
+    </div>
             <div class="map-container">
                 <iframe src="https://www.google.com/maps/embed?pb=!3m2!1ses!2sco!4v1719179104816!5m2!1ses!2sco!6m8!1m7!1syPGMPG9NaUbNoMvuzkNRqg!2m2!1d4.740374200842526!2d-74.03095130866481!3f48.39138202233117!4f-12.943131979818673!5f0.7820865974627469" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
     </template>
 <!------------------------------------- INICIO DE SESION ------------------------------------->
-        <template id="inicioDeSesion">
+    <template id="inicioDeSesion">                               
             <div class="fondo">
                 <div class="iniciarSesion">
-                    <button class="btn-regresar">
+                    <button class="btn-regresar" id="bt-regresar">
                         <img src="/new_node.js-master/new_node.js-master/client/view/imagenes/back-icon.png" alt="btn-regresar">
                     </button>
                     <h1>Inicio sesion</h1>
@@ -379,17 +379,17 @@
                         </form>
                         
                     </div>
-                    <button class="bt-iniciar">Iniciar sesion</button>
-                    <button class="bt-registrarse">Registrarse</button>
-                    <button class="bt-recuperarC">Olvide mi contraseña</button>
+                    <button class="btn-iniciar" id="bt-iniciar1">Iniciar sesion</button>
+                    <button class="btn-registrarse" id="bt-registrarse1">Registrarse</button>
+                    <button class="btn-recuperarC" id="bt-recuperarC">Olvide mi contraseña</button>
                 </div>
             </div>    
-        </template>
+    </template>
 <!--------------------------------------- REGISTRARSE ---------------------------------------->
-        <template id="registrarse">
+    <template id="registrarse">
             <div class="fondo">
                 <div class="registrarse">
-                    <button class="btn-regresar">
+                    <button class="btn-regresar" id="bt-regresar">
                         <img src="/new_node.js-master/new_node.js-master/client/view/imagenes/back-icon.png" alt="btn-regresar">
                     </button>
                     <h1>Registrarse</h1>
@@ -417,15 +417,15 @@
                         </div>
                     </form>
                     </div>
-                    <button class="bt-registrarse">Registrarse</button>
+                    <button class="btn-registrarse" id="bt-registrarse2">Registrarse</button>
                 </div>
             </div>
-        </template>
+    </template>
 <!-------------------------------- VERIFICACIÓN DE CORREO #1 --------------------------------->
-        <template id="verificarCorreo1">
+    <template id="verificarCorreo1">
             <div class="fondo">
                 <div class="verificacionC1">
-                    <button class="btn-regresar">
+                    <button class="btn-regresar" id="bt-regresar">
                         <img src="/new_node.js-master/new_node.js-master/client/view/imagenes/back-icon.png" alt="btn-regresar">
                     </button>
                     <h1>Verificación de la cuenta</h1>
@@ -441,16 +441,16 @@
                                 </div>
                             </form>
                     </div>
-                    <button class="reenviar">Reenviar codigo</button>
-                    <button class="btVerificar">Verificar</button>
+                    <button class="btn-reenviar" id="bt-reenviar1">Reenviar codigo</button>
+                    <button class="btn-Verificar" id="bt-verificar">Verificar</button>
                 </div>
             </div>
-        </template>
+    </template>
 <!-------------------------------- VERIFICACIÓN DE CORREO #2 --------------------------------->
-        <template id="verificarCorreo2">
+    <template id="verificarCorreo2">
             <div class="fondo">
                 <div class="verificacionC2">
-                    <button class="btn-regresar">
+                    <button class="btn-regresar" id="bt-regresar">
                         <img src="/new_node.js-master/new_node.js-master/client/view/imagenes/back-icon.png" alt="btn-regresar">
                     </button>
                     <b>
@@ -459,15 +459,15 @@
                 </div>
                 <div class="verificacionCorreo">
                     <h3>Verificación exitosa</h3>
-                    <button class="btVerificar">Iniciar sesión</button>
+                    <button class="btn-Verificar" id="bt-iniciar2">Iniciar sesión</button>
                 </div>
             </div>
-        </template>
+    </template>
 <!-------------------------------- RECUPERACION DE CONTRASEÑA #1 ----------------------------->
-        <template id="recuperacionContaseña1">
+    <template id="recuperacionContaseña1">
             <div class="fondo">
                 <div class="rContraseña">
-                    <button class="btn-regresar">
+                    <button class="btn-regresar" id="bt-regresar">
                         <img src="/new_node.js-master/new_node.js-master/client/view/imagenes/back-icon.png" alt="btn-regresar">
                     </button>
                     <h1>Recuperar contraseña</h1>
@@ -486,16 +486,16 @@
                     </div>
                 </form>
                 </div>
-                <button class="reenviar">Reenviar codigo</button>
-                <button class="recuperar">Recuperar contraseña</button>
+                <button class="btn-reenviar" id="bt-reenviar2">Reenviar codigo</button>
+                <button class="btn-recuperar" id="bt-recuperar1">Recuperar contraseña</button>
                 </div>
             </div>
-        </template>
+    </template>
 <!-------------------------------- RECUPERACION DE CONTRASEÑA #2 ----------------------------->
-        <template id="recuperacionContaseña2">
+    <template id="recuperacionContaseña2">
             <div class="fondo">
                 <div class="rContraseña">
-                    <button class="btn-regresar">
+                    <button class="btn-regresar" id="bt-regresar">
                         <img src="/new_node.js-master/new_node.js-master/client/view/imagenes/back-icon.png" alt="btn-regresar">
                     </button>
                     <h1>Recuperar contraseña</h1>
@@ -513,28 +513,28 @@
                     </div>
                 </form>
                 </div>
-                <button class="recuperar">Recuperar contraseña</button>
+                <button class="btn-recuperar" id="bt-recuperar2">Recuperar contraseña</button>
                 </div>
             </div>
-        </template>
+    </template>
 <!-------------------------------- RECUPERACION DE CONTRASEÑA #3 ----------------------------->
-        <template id="recuperacionContaseña3">
+    <template id="recuperacionContaseña3">
             <div class="fondo">
                 <div class="rContraseña">
-                    <button class="btn-regresar">
+                    <button class="btn-regresar" id="bt-regresar">
                         <img src="/new_node.js-master/new_node.js-master/client/view/imagenes/back-icon.png" alt="btn-regresar">
                     </button>
                     <h1>Recuperar contraseña</h1>
                 </div>
                 <div class="recuperarContraseña">
-                    <button class="recuperar3">Iniciar sesión</button>
+                    <button class="btn-recuperar3" id="bt-iniciar3">Iniciar sesión</button>
                 </div>
             </div>
-        </template>        
+    </template>        
 <!------------------------------------ DESCRIPCIÓN PRODUCTO ---------------------------------->
-        <template id="descripcionProducto">
+    <template id="descripcionProducto">
             <div class="descripcionPro">
-                <button class="btn-regresar">
+                <button class="btn-regresar" id="bt-regresar">
                     <img src="/new_node.js-master/new_node.js-master/client/view/imagenes/back-icon.png" alt="btn-regresar">
                 </button>
                 <h1>Descripción del producto</h1>
@@ -566,48 +566,48 @@
                     </div>
                 </div>
             </div>
-        </template>
+    </template>
 <!------------------------------------- CARRITO DE COMPRAS ----------------------------------->
-        <!-- <template id="carritoCompras"> -->
+    <template id="carritoCompras">
                 <div class="carrito">
-                    <button class="btn-regresar">
-                        <img src="/new_node.js-master/new_node.js-master/client/view/imagenes/back-icon.png" alt="btn-regresar">
+                    <button class="btn-regresar" id="bt-regresar">
+                        <img src="/new_node.js-master/client/view/imagenes/back-icon.png" alt="btn-regresar">
                     </button>
                     <h1>Carrito de compras</h1>
                 </div>
                 <div class="carritoCompras">
                     <div class="productos">
                         <div class="producto">
-                            <img src="/new_node.js-master/new_node.js-master/client/productos/11.jpg" alt="Producto 2">
+                            <img src="/new_node.js-master/client/productos/11.jpg" alt="Producto 2">
                             <div class="descripcion">
                                 <h2>Producto 2</h2>
                                 <p>Descripción del producto 2</p>
                                 <p class="price">$20,000</p>
                             </div>
-                            <button class="bt-eliminar">
-                                <img src="/new_node.js-master/new_node.js-master/client/view/imagenes/cart-x.svg" alt="btn-eliminar">
+                            <button class="btn-eliminar" id="bt-eliminar">
+                                <img src="/new_node.js-master/client/view/imagenes/cart-x.svg" alt="btn-eliminar">
                             </button>
                         </div>
                         <div class="producto">
-                            <img src="/new_node.js-master/new_node.js-master/client/productos/12.jpg" alt="Producto 3">
+                            <img src="/new_node.js-master/client/productos/12.jpg" alt="Producto 3">
                             <div class="descripcion">
                                 <h2>Producto 3</h2>
                                 <p>Descripción del producto 3</p>
                                 <p class="price">$30,000</p>
                             </div>
-                            <button class="bt-eliminar">
-                                <img src="/new_node.js-master/new_node.js-master/client/view/imagenes/cart-x.svg" alt="btn-eliminar">
+                            <button class="btn-eliminar" id="bt-eliminar">
+                                <img src="/new_node.js-master/client/view/imagenes/cart-x.svg" alt="btn-eliminar">
                             </button>
                         </div>
                         <div class="producto">
-                            <img src="/new_node.js-master/new_node.js-master/client/productos/16.jpg" alt="Producto 4">
+                            <img src="/new_node.js-master/client/productos/16.jpg" alt="Producto 4">
                             <div class="descripcion">
                                 <h2>Producto 4</h2>
                                 <p>Descripción del producto 4</p>
                                 <p class="price">$40,000</p>
                             </div>
-                            <button class="bt-eliminar">
-                                <img src="/new_node.js-master/new_node.js-master/client/view/imagenes/cart-x.svg" alt="btn-eliminar">
+                            <button class="btn-eliminar" id="bt-eliminar">
+                                <img src="/new_node.js-master/client/view/imagenes/cart-x.svg" alt="btn-eliminar">
                             </button>
                         </div>
                     </div>
@@ -620,19 +620,18 @@
                 </div>
 
                 <div class="botones">
-                    <button class="bt-comprar">Comprar</button>
-                    <button class="bt-vaciar">Vaciar carrito</button>
+                    <button class="btn-comprar" id="bt-comprar">Comprar</button>
+                    <button class="btn-vaciar" id="bt-vaciar">Vaciar carrito</button>
                 </div>
-        <!-- </template> -->
-
-
-
+    </template>
+<!------------------------------------- BOTONES DE LA PAGINA --------------------------------->
     <template id="btnCarrito">
         <div class="carrito-btn">
-            <button id= "bt-añadir" class="añadirCarrito">Añadir al carrito</button>
-            <button id= "bt-ver" class="verCarrito">Ver carrito</button>
+            <button id= "bt-añadir" class="btn-añadirCarrito">Añadir al carrito</button>
+            <button id= "bt-ver" class="btn-verCarrito">Ver carrito</button>
         </div>
     </template>
+<!------------------------------------- FOOTER DE LA PAGINA ---------------------------------->
     <footer>
         <div class="info">
             <p><b>Dirección:</b> Cl. 163a #8g - 80, Bogotá</p>
@@ -657,8 +656,9 @@
             document.getElementById('current-year').textContent = new Date().getFullYear();
         </script>
     </footer>
+<!------------------------------------- SCRIPTS DE LA PAGINA --------------------------------->
+    <script src="/new_node.js-master/client/view/script.js"></script>    
 </body>
 </html>
-<script src="/new_node.js/client/pages/script.js"></script>    
 
 <!-- <script src="js/controller.js"></script>  Controlador -->
