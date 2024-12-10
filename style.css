@@ -94,7 +94,7 @@ footer p {
     transform: translateY(-2px);
 }
 
-.inSesion {
+.btn-inSesion {
     background-color: var(--bs-btn-bg);
     color: var(--bg-color);
     border: none;
@@ -291,18 +291,18 @@ footer a:hover {
     padding-block-end: 3%;
 }
 
-.bt-iniciar {
+.btn-iniciar {
     background-color: black;
     color: white;
     margin-bottom: 2%;
 }
 
-.bt-registrarse {
+.btn-registrarse {
     background-color: black;
     color: white;
 }
 
-.bt-recuperarC {
+.btn-recuperarC {
     color: black;
     padding-right: 80%;
     background-color: rgb(200, 197, 197);
@@ -375,7 +375,7 @@ footer a:hover {
     flex-direction: row
 }
 
-.btVerificar {
+.btn-Verificar {
     background-color: black;
     color: white;
     margin-block-start: 2%;
@@ -423,7 +423,7 @@ footer a:hover {
     margin-left: 2%;
 }
 
-.reenviar {
+.btn-reenviar {
     display: flex;
     margin-left: 2%;
     background-color: rgb(200, 197, 197);
@@ -431,13 +431,13 @@ footer a:hover {
     margin-block-end: 1%;
 }
 
-.recuperar {
+.btn-recuperar {
     margin-block-start: 3%;
     background-color: black;
     color: white;
 }
 
-.recuperar3 {
+.btn-recuperar3 {
     background-color: black;
     color: white;
     padding: 1%;
@@ -520,13 +520,13 @@ footer a:hover {
     padding: 2%;
 }
 
-.añadirCarrito {
+.btn-añadirCarrito {
     background-color: black;
     color: var(--button-text);
     margin-bottom: 1%;
 }
 
-.verCarrito {
+.btn-verCarrito {
     background-color: black;
     color: var(--button-text);
 }
@@ -589,7 +589,7 @@ footer a:hover {
     margin-top: 5px;
 }
 
-.bt-eliminar {
+.btn-eliminar {
     border: none;
     background-color: rgb(200, 197, 197);
     width: 10%;
@@ -598,7 +598,7 @@ footer a:hover {
     margin-block-start: 18%;
 }
 
-.bt-eliminar img {
+.btn-eliminar img {
     width: 30px;
     height: 30px;
 }
@@ -629,7 +629,7 @@ footer a:hover {
     margin-block-end: 5%;
 }
 
-.bt-comprar {
+.btn-comprar {
     background-color: black;
     color: white;
     margin-block-end: 5%;
@@ -637,7 +637,7 @@ footer a:hover {
     margin-inline-end: 1%;
 }
 
-.bt-vaciar {
+.btn-vaciar {
     background-color: black;
     color: white;
     margin-block-end: 5%;
