@@ -16,7 +16,7 @@
 
 .fondo {
     background: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.1)), 
-                url(/new_node.js-master/new_node.js-master/client/view/imagenes/fondo3.jpg);
+                url(/new_node.js-master/client/view/imagenes/fondo3.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -255,10 +255,22 @@ footer a:hover {
 }
 
 .btn-regresar {
-    margin-inline-end: 35%;
     border: none;
     display: flex;
+    align-items: center;
     background-color: rgba(192, 192, 192, 0.0);
+}
+
+.botones-atras {
+    display: flex;
+    width: 0%;
+    justify-content: center;
+}
+
+.titulo {
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
 /*----------------------------------- INICIO SESION --------------------------*/
 .iniciarSesion {
