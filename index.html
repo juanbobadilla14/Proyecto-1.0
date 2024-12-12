@@ -641,12 +641,14 @@
                 </div>
     </template>
 <!------------------------------------- BOTONES DE LA PAGINA --------------------------------->
-    <template id="btnCarrito">
-        <div class="carrito-btn">
-            <button id= "bt-añadir" class="btn-añadirCarrito">Añadir al carrito</button>
-            <button id= "bt-ver" class="btn-verCarrito">Ver carrito</button>
-        </div>
-    </template>
+<div id="carrito" class="fixed-bottom bg-light p-3" style="display: none;">
+    <div class="container">
+        <button class="btn btn-primary" id="bt-carrito">
+            🛒 Carrito de Compras
+        </button>
+        <span id="item-count" class="badge bg-secondary">0</span>
+    </div>
+</div>
 <!------------------------------------- FOOTER DE LA PAGINA ---------------------------------->
     <footer>
         <div class="info">
@@ -673,7 +675,7 @@
         </script>
     </footer>
 <!------------------------------------- SCRIPTS DE LA PAGINA --------------------------------->
-    <script src="/new_node.js-master/client/view/script.js"></script>    
+    <script src="/client/script.js"></script>    
 </body>
 </html>
 
