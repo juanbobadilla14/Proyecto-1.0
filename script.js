@@ -1,8 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // Contenedor principal para cargar templates
     const contenedor = document.querySelector("#pantalla-templates");
+    const history = []; // Array para almacenar el historial de templates
 
-    // Función para mostrar un template por su ID
     const mostrarTemplate = (templateId) => {
         contenedor.innerHTML = ""; // Limpia el contenido del contenedor
 
@@ -10,44 +9,59 @@ document.addEventListener("DOMContentLoaded", () => {
         if (template) {
             const contenidoClonado = template.content.cloneNode(true);
             contenedor.appendChild(contenidoClonado);
+            history.push(templateId); // Agrega el template al historial
+            controlarVisibilidadCarrito(templateId); // Controla la visibilidad del botón
         } else {
             console.error(`Template con ID "${templateId}" no encontrado.`);
         }
     };
 
-    // Cargar el template inicial (pantalla principal)
+    const controlarVisibilidadCarrito = (templateId) => {
+        const carrito = document.getElementById("carrito");
+        if (templateId === "pantallaPrincipal" || templateId === "descripcionProducto") {
+            carrito.style.display = "block"; // Muestra el botón
+        } else {
+            carrito.style.display = "none"; // Oculta el botón
+        }
+    };
+
+    // Cargar el template inicial
     mostrarTemplate("pantallaPrincipal");
 
-    // Delegación de eventos para manejar cambios de template
     document.addEventListener("click", (event) => {
-
         // INICIO DE SESION
         if (event.target.id === "bt-inSesion") {
             mostrarTemplate("inicioDeSesion");
-        } if (event.target.id === "bt-registrarse1") {
+        } else if (event.target.id === "bt-registrarse1") {
             mostrarTemplate("registrarse");
-        } if (event.target.id === "bt-recuperarC") {
+        } else if (event.target.id === "bt-recuperarC") {
             mostrarTemplate("recuperacionContaseña1");
         }
         // REGISTRARSE
-        if (event.target.id === "bt-registrarse2") {
+        else if (event.target.id === "bt-registrarse2") {
             mostrarTemplate("verificarCorreo1");
-        } if (event.target.id === "bt-verificar") {
-            mostrarTemplate("verificarCorreo2"); 
-        } if (event.target.id === "bt-iniciar2") {
+        } else if (event.target.id === "bt-verificar") {
+            mostrarTemplate("verificarCorreo2");
+        } else if (event.target.id === "bt-iniciar2") {
             mostrarTemplate("inicioDeSesion");
         }
         // RECUPERACION DE CONTRASEÑA
-        if (event.target.id === "bt-recuperar1") {
+        else if (event.target.id === "bt-recuperar1") {
             mostrarTemplate("recuperacionContaseña2");
-        } if (event.target.id === "bt-recuperar2") {
+        } else if (event.target.id === "bt-recuperar2") {
             mostrarTemplate("recuperacionContaseña3");
-        } if (event.target.id === "bt-iniciar3") {
+        } else if (event.target.id === "bt-iniciar3") {
             mostrarTemplate("inicioDeSesion");
         }
-        // DESCRIPCION PRODUCTO
-        if (event.target.id === "bt-productos") {
-            mostrarTemplate("descripcionProducto");
+        // BOTON REGRESAR
+        else if (event.target.closest(".btn-regresar")) {
+            history.pop(); // Elimina el último template del historial
+            const previousTemplate = history[history.length - 1];
+            if (previousTemplate) {
+                mostrarTemplate(previousTemplate);
+            } else {
+                contenedor.innerHTML = ""; // Limpia el contenedor si no hay historial
+            }
         }
     });
 });
